@@ -4,10 +4,14 @@ import { Sport } from '../models/sportModel.js';
 import { Court } from '../models/courtModel.js';
 
 // Load environment variables
-dotenv.config({ path: './.env' });
+dotenv.config({ path: '../.env' });
+
+console.log('NODE_ENV:', process.env.NODE_ENV); // Debugging line
+console.log('MONGODB_URL:', process.env.MONGODB_URL); // Debugging line
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URL)
+mongoose
+  .connect(process.env.MONGODB_URL)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
