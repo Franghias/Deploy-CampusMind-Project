@@ -1,0 +1,4 @@
+# filepath: c:\Users\User\Desktop\Deploy-CampusMind-Project\CampusMind\frontend\.dockerignore
+node_modules
+npm-debug.log
+.env
